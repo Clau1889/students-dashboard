@@ -14,9 +14,15 @@ p, span{
     font-family: 'Neucha', cursive;
 }
 
+main > h4{
+    margin-left: 1.5rem;
+}
+
 main > div.box-data-student{
-    border: 1px solid black;
+    border: 1px solid rgb(119, 115, 115);
+    border-radius: 1rem;
     margin: 2rem 1rem;
+    height: auto;
     padding: 0.5rem;
 }
 
@@ -26,8 +32,8 @@ main > div.box-data-student > div > p{
 }
 
 main > div.box-data-student > img{
-    border: 1px solid gray;
-    border-radius: 5px;
+    border-radius: 1rem;
     margin: 1rem;
-    width: 13rem;
+    max-height: 8rem;
+    max-width: 13rem;
 }

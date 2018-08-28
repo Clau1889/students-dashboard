@@ -1,5 +1,8 @@
 $(document).ready(function(){
 
+    $('#students').click(function(e) {
+        e.preventDefault();
+
     // Create functio to Into Data
     function studentsData (data){
         let students= data.students;
@@ -28,12 +31,14 @@ $(document).ready(function(){
 
         // Create template for each Student
         let template=   '<div class="box-data-student row">' +
-                            '<img class="col 5" src="'+photo+'" alt="photo-student">' +
-                            '<div class="col 7">' +
+                            '<img class="col s12 m5 l5" src="'+photo+'" alt="photo-student">' +
+                            '<div class="col s12 m7 l7 offset">' +
                                 '<p class="name">'+name+'</p>' +
                             '<div class="chips chips-placeholder"></div></div>' +
                         '</div>'
 
         return template;
     }
+
+        });
   });
