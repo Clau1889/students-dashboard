@@ -1,0 +1,33 @@
+            /*********************\
+            *     GENERALS        *
+            \*********************/
+
+body{
+    box-sizing: content-box;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Patrick Hand', cursive;
+}
+
+p, span{
+    font-family: 'Neucha', cursive;
+}
+
+main > div.box-data-student{
+    border: 1px solid black;
+    margin: 2rem 1rem;
+    padding: 0.5rem;
+}
+
+main > div.box-data-student > div > p{
+    font-size: 150%;
+    margin-top: 2rem;
+}
+
+main > div.box-data-student > img{
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: 1rem;
+    width: 13rem;
+}
