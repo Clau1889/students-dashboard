@@ -1,8 +1,39 @@
 $(document).ready(function(){
 
-    $('.chips-placeholder').chips({
-        placeholder: 'Add your skill',
-        secondaryPlaceholder: '+tag',
-    });      
+    // Create functio to Into Data
+    function studentsData (data){
+        let students= data.students;
+        console.log(students);
 
+        for (i=0; i < students.length; i++){
+            
+            let nameStudent= students[i].name;
+            console.log(nameStudent);
+            let photoStudent= students[i].photo;
+            console.log(photoStudent);
+            
+            $('#box-students').append(template(photoStudent, nameStudent));
+        
+             // Create chips
+            $('.chips-placeholder').chips({
+                 placeholder: 'Add your skill',
+                secondaryPlaceholder: 'skills',
+            }); 
+        }
+    }
+    studentsData(data);
+
+    //Create function to create template
+    function template (photo, name){
+
+        // Create template for each Student
+        let template=   '<div class="box-data-student row">' +
+                            '<img class="col 5" src="'+photo+'" alt="photo-student">' +
+                            '<div class="col 7">' +
+                                '<p class="name">'+name+'</p>' +
+                            '<div class="chips chips-placeholder"></div></div>' +
+                        '</div>'
+
+        return template;
+    }
   });
